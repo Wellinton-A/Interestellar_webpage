@@ -1,0 +1,51 @@
+.synopsis {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+
+    &__img {
+        max-width: 30%;
+        margin-left: 250px;
+
+        img {
+            max-height: 700px;
+            position: relative;
+            animation: float 3s ease infinite;
+        }
+    }
+
+    &__text {
+        max-width: 40vw;
+        margin-left: 10vw;
+        align-self: flex-start;
+        margin-top: 25vh;
+
+        &__title {
+            color: #a4a4a4;
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+        &__paragraph {
+            color: #a4a4a4;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+      }
+      50% {
+        transform: translatey(-20px);
+      }
+      100% {
+        transform: translatey(0px);
+      }
+}

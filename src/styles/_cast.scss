@@ -1,0 +1,68 @@
+.cast {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #232323;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    &__container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: none;
+
+        &__img {
+            height: 100%;
+        }
+
+        &--selected {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__text {
+            position: absolute;
+            bottom: 40%;
+            left: 10%;
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+
+            &__character {
+                font-family: 'Dancing Script', cursive;
+                color: #646464;
+                font-size: 32px;
+            }
+
+            &__actor {
+                font-family: 'Reem Kufi Fun', sans-serif;
+                color: #A4A4A4;
+                font-size: 48px;
+            }
+        }
+    }
+
+    &__selector {
+        position: absolute;
+        bottom: 5%;
+        max-height: 350px;
+        max-width: 100%;
+        padding: 30px 50px;
+        background-color: rgba($color: #4B4B4B, $alpha: 0.2);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 50px;
+
+        &__img {
+            cursor: pointer;
+            max-height: 250px;
+            opacity: 30%;
+
+            &--selected {
+                opacity: 100%;
+            }
+        }
+    }
+}
