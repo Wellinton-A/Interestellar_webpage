@@ -49,13 +49,82 @@ module.exports = function(grunt) {
                 files: 'src/styles/**/*.scss',
                 tasks: ['sass:development']
             }
+        },
+        replace: {
+            dev: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'CSS',
+                            replacement: './styles/main.css'
+                        },
+                        {
+                            match: 'JS',
+                            replacement: '../src/script/script.js'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['src/index.html'],
+                        dest: 'dev/'
+                    }
+                ]
+            },
+            dist: {
+                options: {
+                    patterns: [
+                        {
+                            match: 'CSS',
+                            replacement: './styles/main.min.css'
+                        },
+                        {
+                            match: 'JS',
+                            replacement: './script/script.min.js'
+                        }
+                    ]
+                },
+                files: [
+                    {
+                        expand: true,
+                        flatten: true,
+                        src: ['prebuild/index.html'],
+                        dest: 'dist/'
+                    }
+                ]
+            }
+        },
+        htmlmin: {
+            dist: {
+                options: {
+                    removeComents: true,
+                    collapseWhitespace: true
+                },
+                files: {
+                    'prebuild/index.html' : 'src/index.html'
+                }
+            }
+        },
+        clean: ['prebuild'],
+        uglify: {
+            my_target: {
+                files: {
+                    'dist/script/script.min.js' : 'src/script/script.js'
+                }
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-replace');
+    grunt.loadNpmTasks('grunt-contrib-htmlmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-clean');
 
-    grunt.registerTask('default', ['sass:development','imagemin:development','watch']);
-    grunt.registerTask('build', ['sass:production']);
+    grunt.registerTask('default', ['sass:development','imagemin:development','replace:dev','watch']);
+    grunt.registerTask('build', ['sass:production','uglify','htmlmin','imagemin:production','replace:dist','clean']);
 }
