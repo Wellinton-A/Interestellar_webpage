@@ -19,5 +19,9 @@
     "grunt-contrib-uglify": "^5.2.2",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-replace": "^2.0.2"
+  },
+  "dependencies": {
+    "ruby": "^0.6.1",
+    "sass": "^1.60.0"
   }
 }
