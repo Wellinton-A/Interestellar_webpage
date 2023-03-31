@@ -6,6 +6,39 @@
     display: flex;
     justify-content: end;
 
+    img {
+        display: none;
+
+        @media screen and (max-width:768px) {
+            display: initial;
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        background-image: initial;
+        background-color: #000000;
+        background-size: initial;
+        height: fit-content;
+        justify-content: initial;
+        display: flex;
+        flex-direction: column;
+        max-height: fit-content;
+    }
+
+    @media screen and (max-width:1023px) {
+        background-color: #000000;
+        background-size: 900px;
+        background-repeat: no-repeat;
+        height: fit-content;
+        font-size: 12px;
+        font-weight: initial;
+        line-height: initial;
+        min-height: fit-content;
+    }
+
+    
+
     &__intro {
         display: flex;
         flex-direction: column;
@@ -13,12 +46,34 @@
         margin-right: 40px;
         margin-top: 30vh;
 
+        @media screen and (max-width:768px) {
+            max-width: 85%;
+            margin-top: 16px;
+            margin: 16px auto;
+        }
+
+        @media screen and (min-width:769px) and (max-width:1023px) {
+            margin-top: 40px;
+            margin-right: 16px;
+            max-width: 220px;
+            margin-bottom: 16px;
+        }
+
         &__title {
             color: #ffffff;
             font-family: 'Roboto', sans-serif;
             font-size: 40px;
             font-weight: bold;
-            margin-bottom: 40PX;
+            margin-bottom: 40px;
+
+            @media screen and (max-width:768px) {
+                font-size: 32px;
+                color: #8A8A8A;
+            }
+
+            @media screen and (max-width:1023px) {
+                font-size: 24px;
+            }
         }
 
         &__paragraph {
@@ -26,6 +81,7 @@
             font-family: 'Roboto', sans-serif;
             font-size: 16px;
             font-weight: 400;
+            line-height: 24px;
         }
 
         &__button {

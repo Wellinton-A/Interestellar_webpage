@@ -13,8 +13,17 @@
     <link rel="stylesheet" href="../dev/styles/main.css">
 </head>
 <body>
-    <header></header>
-    <section class="hero">
+    <header class="header">
+        <img src="./images/BlackHoleLogo.png" alt="black hole">
+        <nav class="header__nav">
+            <a href="#home">Home</a>
+            <a href="#synopsis">Synopsis</a>
+            <a href="#cast">Cast</a>
+            <a href="#trailers">Trailer</a>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <img src="./images/mobile_hero.webp" alt="Interestellar">
         <div class="hero__intro">
             <h2 class="hero__intro__title">Could we find a way to survive as specie</h2>
             <p class="hero__intro__paragraph">
@@ -27,7 +36,7 @@
             </button>
         </div>
     </section>
-    <section class="synopsis">
+    <section id="synopsis" class="synopsis">
         <div class="synopsis__img">
             <img src="./images/Astronaut.png" alt="astronaut">
         </div>
@@ -40,57 +49,95 @@
                 As they explore these alien worlds and encounter unexpected challenges, Cooper and Amelia must use their ingenuity and knowledge of science to navigate the dangers of deep space and find a new home for humanity. The film explores themes of time, space, love, and the human condition in the face of impossible odds.</p>
         </div>
     </section>
-    <section class="cast">
-        <div class="cast__container cast__container--selected">
+    <section id="cast" class="cast">
+        <h1>Cast</h1>
+        <div data-tab-container="Mackenzie" class="cast__container cast__container--selected">
             <img class="cast__container__img" src="./images/Cast/Mackenzie_Foy-Murph 2.png" alt="Mackenzie Foy">
             <div class="cast__container__text">
                 <span class="cast__container__text__character">Murphy Cooper</span>
                 <span class="cast__container__text__actor">Mackenzie Foy</span>
             </div>
         </div>
-        <div class="cast__container">
+        <div data-tab-container="Michael" class="cast__container">
             <img class="cast__container__img" src="./images/Cast/Michael_Caine-Prof_Brand 2.png" alt="Michael Caine">    
             <div class="cast__container__text">
-                <span class="cast__container__text__character">Murphy Cooper</span>
-                <span class="cast__container__text__actor">Mackenzir Foy</span>
+                <span class="cast__container__text__character">Professor Brand</span>
+                <span class="cast__container__text__actor">Michael Caine</span>
             </div>
         </div>
-        <div class="cast__container">
+        <div data-tab-container="Matthew" class="cast__container">
             <img class="cast__container__img" src="./images/Cast/Matthew_McConaughey-Cooper 2.png" alt="Matthew McConaughey">    
             <div class="cast__container__text">
-                <span class="cast__container__text__character">Murphy Cooper</span>
-                <span class="cast__container__text__actor">Mackenzir Foy</span>
+                <span class="cast__container__text__character">Cooper</span>
+                <span class="cast__container__text__actor">Matthew McConaughey</span>
             </div>
         </div>
-        <div class="cast__container">
+        <div data-tab-container="Jessica" class="cast__container">
             <img class="cast__container__img" src="./images/Cast/Jessica_Chastain-Murphy 2.png" alt="Jessica Chastain">    
             <div class="cast__container__text">
-                <span class="cast__container__text__character">Murphy Cooper</span>
-                <span class="cast__container__text__actor">Mackenzir Foy</span>
+                <span class="cast__container__text__character">Murphy</span>
+                <span class="cast__container__text__actor">Jessica Chastain</span>
             </div>
         </div>
-        <div class="cast__container">
+        <div data-tab-container="Anne" class="cast__container">
             <img class="cast__container__img" src="./images/Cast/anne_hathaway-Brand 2.png" alt="anne hathaway">
             <div class="cast__container__text">
-                <span class="cast__container__text__character">Murphy Cooper</span>
-                <span class="cast__container__text__actor">Mackenzir Foy</span>
+                <span class="cast__container__text__character">Brand</span>
+                <span class="cast__container__text__actor">anne hathaway</span>
             </div>
         </div>
-        <div class="cast__container">
+        <div data-tab-container="Casey" class="cast__container">
             <img class="cast__container__img" src="./images/Cast/Casey_Affleck-Tom 2.png" alt="Casey Affleck">
             <div class="cast__container__text">
-                <span class="cast__container__text__character">Murphy Cooper</span>
-                <span class="cast__container__text__actor">Mackenzir Foy</span>
+                <span class="cast__container__text__character">Tom</span>
+                <span class="cast__container__text__actor">Casey Affleck</span>
             </div>
         </div>
         <div class="cast__selector">
-            <img class="cast__selector__img cast__selector__img--selected" src="./images/Cast/Mackenzie_Foy-Murph .png" alt="Mackenzie Foy">
-            <img class="cast__selector__img" src="./images/Cast/Michael_Caine-Prof_Brand.png" alt="Michael Caine">
-            <img class="cast__selector__img" src="./images/Cast/Matthew_McConaughey-Cooper.png" alt="Matthew McConaughey">
-            <img class="cast__selector__img" src="./images/Cast/Jessica_Chastain-Murphy.png" alt="Jessica Chastain">
-            <img class="cast__selector__img" src="./images/Cast/anne_hathaway-Brand.png" alt="anne hathaway">
-            <img class="cast__selector__img" src="./images/Cast/Casey_Affleck-Tom.png" alt="Casey Affleck">
+            <img data-tab-selector="Mackenzie" class="cast__selector__img cast__selector__img--selected" src="./images/Cast/Mackenzie_Foy-Murph .png" alt="Mackenzie Foy">
+            <img data-tab-selector="Michael" class="cast__selector__img" src="./images/Cast/Michael_Caine-Prof_Brand.png" alt="Michael Caine">
+            <img data-tab-selector="Matthew" class="cast__selector__img" src="./images/Cast/Matthew_McConaughey-Cooper.png" alt="Matthew McConaughey">
+            <img data-tab-selector="Jessica" class="cast__selector__img" src="./images/Cast/Jessica_Chastain-Murphy.png" alt="Jessica Chastain">
+            <img data-tab-selector="Anne" class="cast__selector__img" src="./images/Cast/anne_hathaway-Brand.png" alt="anne hathaway">
+            <img data-tab-selector="Casey" class="cast__selector__img" src="./images/Cast/Casey_Affleck-Tom.png" alt="Casey Affleck">
         </div>
     </section>
+    <section id="trailers" class="trailers">
+        <div class="trailers__selector">
+            <div data-tab-selector-trailer="trailer-1" class="trailers__selector__item trailers__selector__item--selected">
+                <img src="./images/trailer/trailer-1.jpg" alt="image trailer 1 interestellar">
+                <span>Interestelar - Trailer Oficial 1 (leg) [HD]</span>
+            </div>
+            <div data-tab-selector-trailer="trailer-2" class="trailers__selector__item">
+                <img src="./images/trailer/trailer-2.jpg" alt="image trailer 2 interestellar">
+                <span>Interestelar - Trailer Oficial 2 (leg) [HD]</span>
+            </div>
+            <div data-tab-selector-trailer="trailer-3" class="trailers__selector__item">
+                <img src="./images/trailer/trailer-3.jpg" alt="image trailer 3 interestellar">
+                <span>Interestelar - Trailer Oficial 3 (leg) [HD]</span>
+            </div>
+            <div data-tab-selector-trailer="trailer-4" class="trailers__selector__item">
+                <img src="./images/trailer/trailer-4.jpg" alt="image trailer 4 interestellar">
+                <span>Interestelar - Trailer Oficial 4 (leg) [HD]</span>
+            </div>
+        </div>
+        <div data-tab-container-trailer="trailer-1" class="trailers__container trailers__container--selected">
+            <iframe class="trailers__container__video" src="https://www.youtube.com/embed/hHBsKHVLAYc" title="YouTube video player" frameborder="0" clipboard-write; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div data-tab-container-trailer="trailer-2" class="trailers__container">
+            <iframe class="trailers__container__video" src="https://www.youtube.com/embed/BYUZhddDbdc" title="YouTube video player" frameborder="0" clipboard-write; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div data-tab-container-trailer="trailer-3" class="trailers__container">
+            <iframe class="trailers__container__video" src="https://www.youtube.com/embed/WEwDePQRjBE" title="YouTube video player" frameborder="0" clipboard-write; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div data-tab-container-trailer="trailer-4" class="trailers__container">
+            <iframe class="trailers__container__video" src="https://www.youtube.com/embed/igLyGvbp-04" title="YouTube video player" frameborder="0" clipboard-write; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <footer class="footer">
+        <img src="./images/Astronaut.png" alt="astronaut">
+        <span>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form or by any means, including photocopying, recording, or other electronic or mechanical methods, without the prior written permission of the publisher.</span>
+    </footer>
+    <script src="./script/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,97 @@
+.trailers {
+    background-color: #000000;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    @media screen and (min-width:769px) and (max-width:1023px) {
+        flex-direction: column;
+    }
+
+    &__selector {
+        display: grid;
+        gap: 20px;
+        max-width: 550px;
+        font-size: 18px;
+        margin: 0 50px;
+        padding: 20PX;
+        color: #8A8A8A;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        @media screen and (min-width:769px) and (max-width:1023px) {
+            grid-template-columns: 1fr 1fr;
+            margin: 16px;
+            max-width: fit-content;
+        }
+
+        &__item {
+            display: flex;
+            align-items: center;
+            max-width: 90%;
+            padding: 20px;
+            background-color: rgba($color: #FFFFFF, $alpha: 0.04);
+            border-radius: 8px;
+            cursor: pointer;
+
+            img {
+                width: 200px;
+                margin-right: 40px;
+
+                @media screen and (min-width:769px) and (max-width:1023px) {
+                    width: 150px;
+                }
+            }
+
+            &--selected {
+                margin-left: 50px;
+
+                @media screen and (min-width:769px) and (max-width:1023px) {
+                    margin-left: initial;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    &__container {
+        display: none;
+        margin-left: 50px;
+
+        @media screen and (max-width: 768px) {
+            display: initial;
+            margin: 16px;
+        }
+
+        @media screen and (min-width:769px) and (max-width:1023px) {
+            margin: initial;
+        }
+        
+        &__video {
+            width: 50vw;
+            height: 50vh;
+
+            @media screen and (max-width: 768px) {
+                width: 80vw;
+                height: 20vh;
+            }
+
+            @media screen and (min-width:769px) and (max-width:1023px) {
+                width: 700px;
+                height: 500px;
+                margin: initial;
+            }
+        }
+
+        
+
+        &--selected {
+            display: block;
+        }
+    }
+}

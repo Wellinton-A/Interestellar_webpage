@@ -5,14 +5,40 @@
     display: flex;
     align-items: center;
 
+    @media screen and (max-width:768px) {
+        flex-direction: column-reverse;
+        height: fit-content;
+    }
+
+    @media screen and (max-width:1023px) {
+        
+    }
+
     &__img {
         max-width: 30%;
         margin-left: 250px;
+
+        @media screen and (max-width:768px) {
+            margin-top: 24px;
+            margin-left: initial;
+        }
+
+        @media screen and (max-width:1023px) {
+            margin-left: 16px;
+        }
 
         img {
             max-height: 700px;
             position: relative;
             animation: float 3s ease infinite;
+
+            @media screen and (max-width:768px) {
+                max-height: 25vh;
+            }
+
+            @media screen and (max-width:1023px) {
+                max-width: 300px;
+            }
         }
     }
 
@@ -21,6 +47,16 @@
         margin-left: 10vw;
         align-self: flex-start;
         margin-top: 25vh;
+
+        @media screen and (max-width:768px) {
+            align-self: initial;
+            max-width: initial;
+            margin: 16px;
+        }
+
+        @media screen and (max-width:1023px) {
+            max-width: 450px;
+        }
 
         &__title {
             color: #a4a4a4;
